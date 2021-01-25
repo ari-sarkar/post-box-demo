@@ -5,6 +5,11 @@ const Gmail = ({ acessToken, email }) => {
     fetch(
       `https://gmail.googleapis.com/gmail/v1/users/arisarkar.mail@gmail.com/messages`,
       {
+        "Access-Control-Allow-Credentials": true,
+        "Access-Control-Allow-Headers": "Authorization,Content-Type",
+        "Access-Control-Allow-Methods": "GET",
+        "Access-Control-Allow-Origin":
+          "https://happy-jennings-422b37.netlify.app/",
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -12,10 +17,6 @@ const Gmail = ({ acessToken, email }) => {
             "ya29.a0AfH6SMCJewlO_tsoNlfaZ0RvdZFSc06fH6dXRQmeXo0RSpLYBp0gMMxyfT0nu1nd6kZKXSjodRxzKhH7No59VHDSrOQ457XfIMnpXlbf6h4y_e9So5vLHU09vzxyv7Zf6FusR-YYwIGWiW5yltZ4pUe-SVj7QTV6-277anwNMdk",
           Authorization:
             "Bearer ya29.a0AfH6SMCJewlO_tsoNlfaZ0RvdZFSc06fH6dXRQmeXo0RSpLYBp0gMMxyfT0nu1nd6kZKXSjodRxzKhH7No59VHDSrOQ457XfIMnpXlbf6h4y_e9So5vLHU09vzxyv7Zf6FusR-YYwIGWiW5yltZ4pUe-SVj7QTV6-277anwNMdk",
-          "Access-Control-Allow-Credentials": true,
-          "Access-Control-Allow-Headers": "Authorization,Content-Type",
-          "Access-Control-Allow-Methods": "GET",
-          "Access-Control-Allow-Origin": "https://happy-jennings-422b37.netlify.app/",
         },
       }
     )
