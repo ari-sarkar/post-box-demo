@@ -7,7 +7,7 @@ const Gmail = ({ acessToken, email }) => {
       headers: {
         Access_token: acessToken,
         Authorization: `Bearer ${acessToken}`,
-        Origin: `https://gmail.googleapis.com/gmail/v1/users/${email}/messages`,
+        Origin: `https://happy-jennings-422b37.netlify.app`,
       },
     })
       .then(res => res.json())
