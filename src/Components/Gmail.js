@@ -7,11 +7,10 @@ const Gmail = ({ acessToken, email }) => {
       {
         method: "GET",
         headers: {
-          "Content-Type": "application/json",
           Access_token: acessToken,
           Authorization: `Bearer ${acessToken}`,
           'Access-Control-Allow-Origin': "https://happy-jennings-422b37.netlify.app",
-          
+
         },
       }
     )
