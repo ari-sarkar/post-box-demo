@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 const Gmail = ({ acessToken, email }) => {
   useEffect(() => {
     fetch(
-      `https://cors-anywhere.herokuapp.com/https://gmail.googleapis.com/gmail/v1/users/arisarkar.mail@gmail.com/messages`,
+      `https://gmail.googleapis.com/gmail/v1/users/arisarkar.mail@gmail.com/messages`,
       {
         method: "GET",
         headers: {
@@ -13,9 +13,9 @@ const Gmail = ({ acessToken, email }) => {
           Authorization:
             "Bearer ya29.a0AfH6SMCJewlO_tsoNlfaZ0RvdZFSc06fH6dXRQmeXo0RSpLYBp0gMMxyfT0nu1nd6kZKXSjodRxzKhH7No59VHDSrOQ457XfIMnpXlbf6h4y_e9So5vLHU09vzxyv7Zf6FusR-YYwIGWiW5yltZ4pUe-SVj7QTV6-277anwNMdk",
           "Access-Control-Allow-Credentials": true,
-          "Access-Control-Allow-Headers": "Authorization",
-          "Access-Control-Allow-Methods": "*",
-          "Access-Control-Allow-Origin": "https://mail.google.com",
+          "Access-Control-Allow-Headers": "Authorization,Content-Type",
+          "Access-Control-Allow-Methods": "GET",
+          "Access-Control-Allow-Origin": "https://happy-jennings-422b37.netlify.app/",
         },
       }
     )
