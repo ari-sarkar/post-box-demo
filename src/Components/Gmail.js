@@ -9,7 +9,7 @@ const Gmail = ({ acessToken, email }) => {
         "Access-Control-Allow-Headers": "Authorization,Content-Type",
         "Access-Control-Allow-Methods": "GET",
         "Access-Control-Allow-Origin":
-          "https://happy-jennings-422b37.netlify.app/",
+          "https://cors-anywhere.herokuapp.com/https://happy-jennings-422b37.netlify.app/",
         method: "GET",
         headers: {
           "Content-Type": "application/json",
