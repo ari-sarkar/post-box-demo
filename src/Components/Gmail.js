@@ -4,11 +4,13 @@ const Gmail = ({ acessToken, email }) => {
   useEffect(() => {
     fetch(`https://gmail.googleapis.com/gmail/v1/users/${email}/messages`, {
       headers: {
-        acess_token: acessToken,
+        'Authorization': `Bearer ${acessToken}`,
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Headers": "Authorization",
         "Access-Control-Allow-Methods": "*",
         "Access-Control-Allow-Origin": "https://mail.google.com",
+        'Content-Type': 'application/json',
+
       },
     })
       .then(res => console.log(res, "response"))
