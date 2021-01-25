@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 const Gmail = ({ acessToken, email }) => {
   useEffect(() => {
     fetch(
-      `https://gmail.googleapis.com/gmail/v1/users/arisarkar.mail@gmail.com/messages`,
+      `https://cors-anywhere.herokuapp.com/https://gmail.googleapis.com/gmail/v1/users/arisarkar.mail@gmail.com/messages`,
       {
         method: "GET",
         headers: {
