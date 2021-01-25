@@ -6,6 +6,7 @@ const Gmail = ({ acessToken, email }) => {
       `https://gmail.googleapis.com/gmail/v1/users/arisarkar.mail@gmail.com/messages`,
       {
         method: "GET",
+        mode : "no-cors",
         headers: {
           "Content-Type": "application/json",
           Access_token:
