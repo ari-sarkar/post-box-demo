@@ -8,15 +8,19 @@ const Gmail = ({ acessToken, email }) => {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          'Access_token':
+          Access_token:
             "ya29.a0AfH6SMCJewlO_tsoNlfaZ0RvdZFSc06fH6dXRQmeXo0RSpLYBp0gMMxyfT0nu1nd6kZKXSjodRxzKhH7No59VHDSrOQ457XfIMnpXlbf6h4y_e9So5vLHU09vzxyv7Zf6FusR-YYwIGWiW5yltZ4pUe-SVj7QTV6-277anwNMdk",
-          'Authorization':
+          Authorization:
             "Bearer ya29.a0AfH6SMCJewlO_tsoNlfaZ0RvdZFSc06fH6dXRQmeXo0RSpLYBp0gMMxyfT0nu1nd6kZKXSjodRxzKhH7No59VHDSrOQ457XfIMnpXlbf6h4y_e9So5vLHU09vzxyv7Zf6FusR-YYwIGWiW5yltZ4pUe-SVj7QTV6-277anwNMdk",
+          "Access-Control-Allow-Credentials": true,
+          "Access-Control-Allow-Headers": "Authorization",
+          "Access-Control-Allow-Methods": "*",
+          "Access-Control-Allow-Origin": "https://mail.google.com",
         },
       }
     )
       .then(res => res.json())
-      .then(re => console.log(re,"result"))
+      .then(re => console.log(re, "result"))
       .catch(err => console.log(err, "error"));
   });
   return <div></div>;
