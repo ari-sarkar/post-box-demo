@@ -9,16 +9,13 @@ const GoogleLoginPage = () => {
   const [imgUrl, setImgUrl] = useState("");
   const [acessToken, setAcessToken] = useState("");
   const responseGoogle = response => {
-    console.log(response);
     setLogin(true);
     setUserName(response.profileObj.name);
     setEmail(response.profileObj.email);
     setImgUrl(response.profileObj.imageUrl);
     setImgUrl(response.profileObj.imageUrl);
-    // setAcessToken(response.tokenObj.access_token);
-    setAcessToken(response.tokenId);
+    setAcessToken(response.tokenObj.access_token);
   };
-  console.log("new update")
   return (
     <section id="login">
       {login ? (
